@@ -1,7 +1,6 @@
 """Utilities for working with dotted paths and nested mappings."""
 
 from __future__ import annotations
-
 from typing import List, Mapping, Sequence, TypeVar
 
 T = TypeVar("T")
