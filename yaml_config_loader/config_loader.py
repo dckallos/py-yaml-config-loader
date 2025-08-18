@@ -19,7 +19,7 @@ from .errors import ConfigNotFound, ConfigParseError
 from .path_utils import split_dotted_path, get_nested
 
 
-class ConfigCore:
+class ConfigLoader:
     """
     Static-style interface for loading and querying a YAML config file.
     """
@@ -109,7 +109,7 @@ class ConfigCore:
 
         Examples
         --------
-        >>> ConfigCore.get("data.LOG_LEVEL")
+        >>> ConfigLoader.get("data.LOG_LEVEL")
         'INFO'
         """
 
@@ -262,4 +262,4 @@ class ConfigCore:
         return list(matches)
 
 
-__all__ = ["ConfigCore"]
+__all__ = ["ConfigLoader"]

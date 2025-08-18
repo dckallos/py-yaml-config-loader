@@ -1,11 +1,11 @@
 """yaml_config_loader package.
 
 Public API (Prompt 1):
-- ConfigCore: core read-only loader and accessor
+- ConfigLoader: core read-only loader and accessor
 - ConfigNotFound, ConfigParseError: exceptions
 """
 
-from .config_core import ConfigCore
+from .config_loader import ConfigLoader
 from .errors import ConfigNotFound, ConfigParseError
 
 try:
@@ -22,7 +22,7 @@ except Exception:
     __version__ = "0.1.0"
 
 __all__ = [
-    "ConfigCore",
+    "ConfigLoader",
     "ConfigNotFound",
     "ConfigParseError",
 ]
