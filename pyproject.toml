@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yaml-config-loader"
+version = "0.1.0"
+description = "Comment-preserving YAML config reader core (Objective 1: read-only)."
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.10"
+dependencies = [
+  "PyYAML>=6.0.1",
+]
+authors = [
+  { name = "Daniel C. Kalleward", email = "d.kalleward@gmail.com" }
+]
+license = "MIT"
+license-files = ["LICENSE"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Typing :: Typed",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Utilities",
+]
+keywords = ["yaml", "config", "configuration", "settings"]
+
+[project.urls]
+Homepage = "https://github.com/dckallos/py-yaml-config-loader"
+"Bug Tracker" = "https://github.com/dckallos/py-yaml-config-loader/issues"
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2.0",
+  "pytest-cov>=4.0.0",
+  "mypy>=1.0.0",
+  "black>=23.0.0",
+  "ruff>=0.1.0",
+  "build>=1.0.0",
+  "twine>=4.0.0",
+]
+
+[tool.setuptools]
+include-package-data = true
+ 
+[tool.setuptools.package-data]
+yaml_config_loader = ["py.typed"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["yaml_config_loader*"]
+exclude = ["tests*"]
+
+
