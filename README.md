@@ -19,20 +19,20 @@ pip install yaml-config-loader
 ## Quick Start
 
 ```python
-from yaml_config_loader import ConfigCore
+from yaml_config_loader import ConfigLoader
 
 # Initialize with your YAML file
-ConfigCore.initialize("config.yaml")
+ConfigLoader.initialize("config.yaml")
 
 # Access values using dotted paths
-log_level = ConfigCore.get("data.LOG_LEVEL")
-app_mode = ConfigCore.get("data.APP_MODE", default="development")
+log_level = ConfigLoader.get("data.LOG_LEVEL")
+app_mode = ConfigLoader.get("data.APP_MODE", default="development")
 
 # Get all top-level keys
-keys = ConfigCore.keys()
+keys = ConfigLoader.keys()
 
 # Reload configuration from disk
-ConfigCore.reload()
+ConfigLoader.reload()
 ```
 
 ## Example YAML
@@ -49,10 +49,10 @@ data:
 ## Error Handling
 
 ```python
-from yaml_config_loader import ConfigCore, ConfigNotFound, ConfigParseError
+from yaml_config_loader import ConfigLoader, ConfigNotFound, ConfigParseError
 
 try:
-    ConfigCore.initialize("config.yaml")
+    ConfigLoader.initialize("config.yaml")
 except ConfigNotFound:
     print("Configuration file not found")
 except ConfigParseError as e:
