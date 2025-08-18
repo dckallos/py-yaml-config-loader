@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demo-types
+data:
+  MAX_RETRIES: "5"
+  RETRIES_NEGATIVE: "-2"
+  ENABLE_FEATURE: "true"
+  DISABLE_CACHE: no
+  MAYBE_FLAG: "truthy"
+
+
