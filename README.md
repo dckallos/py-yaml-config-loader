@@ -2,6 +2,10 @@
 
 A comment-preserving YAML configuration reader for Python applications.
 
+## Disclaimer
+
+This code currently amounts to chicken scratch. I have not released the python package, and my work is in development.
+
 ## Features
 
 - Read YAML configuration files with simple dotted-path access
